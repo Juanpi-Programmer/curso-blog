@@ -3,10 +3,18 @@ import { Formik, Field, Form } from "formik";
 import Sidebar from './Sidebar';
 
 class Formulario extends Component{
+    state = {
+        user:{}
+    }
     onSubmit = (values, {setSubmitting}) =>{
         setSubmitting(false);
-        alert(JSON.stringify(values));
+        console.log(JSON.stringify(values));
+
+        this.setState({
+            user: values
+        });
     }
+
     render(){
         const initialValues = {nombre: '', apellidos: '', bio: '', genero: ''}
         return(
@@ -14,6 +22,13 @@ class Formulario extends Component{
                 <div className="center">
                     <div id="content">
                         <h1 className="subheader">Formulario</h1>
+                        {/* Mostrar valores del formulario*/}
+                        {this.state.user.nombre &&
+                            <div id="user-data">
+                                <p>{this.state.user.nombre}</p>
+                            </div>
+
+                        }
                         
                         {/* Crear Formulario */}
                         <Formik 
@@ -21,9 +36,9 @@ class Formulario extends Component{
                             onSubmit={this.onSubmit}>
                             {({isSubmitting}) => (
                                 <Form>
-                                    <label for="bio">Nombre</label>
-                                    <Field type="text" name="nombre" />
-                                    <label for="bio">Apellido</label>
+                                    <label for="nombre">Nombre</label>
+                                    <Field type="text" name="nombre"/>
+                                    <label for="apellidos">Apellido</label>
                                     <Field type="text" name="apellidos" />
 
                                     <div class="form-group">
