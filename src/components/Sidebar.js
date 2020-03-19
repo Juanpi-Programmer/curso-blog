@@ -2,12 +2,10 @@ import React, {Component} from 'react';
 
 class Sidebar extends Component{
     render(){
-        console.log(this.props.blog);
-        
         return(
             <aside id="sidebar">
                 
-                {this.props.blog == "true" &&
+                {this.props.blog==="true" &&
                     <div id="nav-blog" className="sidebar-item">
                         <h3>Puedes hacer esto</h3>
                         <a href="#" className="btn btn-success">Crear artículo</a>

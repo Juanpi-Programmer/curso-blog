@@ -36,20 +36,20 @@ class Formulario extends Component{
                             onSubmit={this.onSubmit}>
                             {({isSubmitting}) => (
                                 <Form>
-                                    <label for="nombre">Nombre</label>
+                                    <label>Nombre</label>
                                     <Field type="text" name="nombre"/>
-                                    <label for="apellidos">Apellido</label>
+                                    <label>Apellido</label>
                                     <Field type="text" name="apellidos" />
 
-                                    <div class="form-group">
-                                        <label for="bio">Biografia</label>
+                                    <div className="form-group">
+                                        <label>Biografia</label>
                                         <textarea name="bio"></textarea>
                                     </div>
 
                                     <Field type="radio" name="genero" value="Hombre" />Hombre
                                     <Field type="radio" name="genero" value="Mujer" />Mujer
                                     <Field type="radio" name="genero" value="Otro" />Otro
-                                    <div class="clearfix"></div>
+                                    <div className="clearfix"></div>
                                     <button 
                                         type="submit" 
                                         disabled={isSubmitting} 

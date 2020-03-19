@@ -7,7 +7,7 @@ class Pelicula extends Component{
     
     render(){
         const {title, image} = this.props.pelicula;
-        const pelicula = this.props.pelicula;
+        //const pelicula = this.props.pelicula;
 
         return(
             <article className="article-item" id="article-template">

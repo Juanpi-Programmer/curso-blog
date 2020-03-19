@@ -11,9 +11,9 @@ class Movies extends Component{
 
     cambiarTitle = () => {
 
-        var { peliculas } = this.state;
+        var { peliculas }=this.state;
         //var random = Math.floor(Math.random() * 3);
-        peliculas[0].title = "BATMAN VS EL GATO";
+        peliculas[0].title="BATMAN VS EL GATO";
 
         this.setState({
             peliculas: peliculas
@@ -51,8 +51,8 @@ class Movies extends Component{
         return(
             <React.Fragment>
                 <Slider 
-                    title = "Peliculas"
-                    size = "slider-small"
+                    title="Peliculas"
+                    size="slider-small"
                 />
                 <div className="center">
                     <div id="content" className="peliculas">
@@ -80,7 +80,7 @@ class Movies extends Component{
                                 <Pelicula 
                                         key={i} 
                                         pelicula={pelicula} 
-                                        indice = {i}
+                                        indice={i}
                                         marcarFavorito={this.favorita}
                                     />
                                 );

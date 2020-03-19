@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import Blog from './components/Blog';
 import Formulario from './components/Formulario';
 import Movies from './components/Movies';
+import Search from './components/Search';
 
 class Router extends Component{
     render(){
@@ -26,7 +27,11 @@ class Router extends Component{
                         <Route exact path="/" component={Home} />
                         <Route exact path="/home" component={Home} />
                         <Route exact path="/blog" component={Blog} />
+                        <Route exact path="/blog/articulo/:id" render={()=>(
+                            <h1>Pagina Individual</h1>
+                        )} />
                         <Route exact path="/formulario" component={Formulario} />
+                        <Route exact path="/blog/busqueda/:search" component={Search} />
                         <Route exact path="/peliculas" component={Movies} />
 
                         <Route exact path="/pruebas/:nombre/:apellidos?" render={(props) => {
