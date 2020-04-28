@@ -204,6 +204,17 @@ body {
   background:black;
 }
 
+.btn-danger{
+  background-color: rgb(250, 0, 0) !important;
+  color: #ffff !important;
+  float: left;
+  margin-right: 20px;
+}
+.btn-warning{
+  background-color: rgb(250, 171, 0) !important;
+  color: #ffff !important;
+  float: left;
+}
 .mid-form{
   width: 50%;
   margin: 0px auto;
@@ -219,13 +230,17 @@ body {
 }
 
 input[type="text"],
-textarea{
+textarea,
+input[type="file"]{
   width: 100%;
   min-height: 30px;
   border: 1px solid #ccc;
   padding: 3px;
   margin-bottom: 5px;
   transition: 300ms all;
+}
+input[type="submit"]{
+  margin-top: 15px;
 }
 
 input[type="text"]:focus,
@@ -248,7 +263,10 @@ textarea{
   float:left;
 }
 
-
+.thumb{
+  display: block;
+  width: 170px;
+}
 #footer{
   background: #f7f7f7;
   width: 100%;

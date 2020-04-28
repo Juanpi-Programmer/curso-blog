@@ -19,7 +19,7 @@ class Articles extends Component {
 
         if (home === 'true') {
             this.getLastArticles();
-        } else if (search && search != null && search != undefined) {
+        } else if (search && search !== null && search !== undefined) {
             this.getArticlesBySearch(search);
         } else {
             this.getArticles();
@@ -55,7 +55,6 @@ class Articles extends Component {
                     articles: res.data.articles,
                     status: 'success'
                 });
-                console.log(this.state.articles);
             })
             .catch(err =>{
                 this.setState({
@@ -63,12 +62,11 @@ class Articles extends Component {
                     status: 'success'
                 });
             })
-        
-
 
     }
 
     render() {
+        
         if (this.state.articles.length >= 1) {
 
             let listArticles = this.state.articles.map((article) => {
